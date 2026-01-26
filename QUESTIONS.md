@@ -1,12 +1,15 @@
-# Questions
+# Pré-requis
 
 Avant de répondre aux questions du projet Data, il est conseillé de lire le fichier `description-des-bases-de-donnees-annuelles.pdf` qui décrit les différentes tables et leur contenu.
+Il faut égelement se rendre sur [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/base-de-donnees-accidents-corporels-de-la-circulation/
+)<img width="1433" height="70" alt="image" src="https://github.com/user-attachments/assets/6d4ac5d8-cd04-41f9-b553-6fc9849d882c" /> et télécharger les fichiers correspondants aux années assignées à votre groupe projet dans un répertoire Données.
+
 
 ## Question 1 - Caractéristiques de l'accident
 
-Lire la donnée `caract-2024.csv` et afficher les 5 premières lignes. Quelle est la taille de la donnée ? Combien de colonnes ? Combien de lignes ?
+Lire tous les fichiers caract-20xx.csv qui se trouvent dans le répertoire ../Données et pour chacun d'eux, afficher les 5 premières lignes,  la taille du fichier, le nombre de colonnes et le nombre de lignes.
 
-En vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer la donnée `caract-2024.csv` conformément à la description des différents champs.
+En se basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer les données des fichiers `caract-20xx.csv` conformément à la description des différents champs.
 
 Par exemple, le champ lum est décrit de la manière suivante:
 
@@ -22,7 +25,7 @@ Lumière : conditions d’éclairage dans lesquelles l'accident s'est produit :
 
 Ainsi, la valeur 1 pour le champ lum devrait être transformée en "Plein jour", la valeur 2 en "Crépuscule ou aube", etc. 
 
-Appliquez l'ensemble des transformations nécessaires à la donnée `caract-2024.csv` pour la transformer conformément à la description des différents champs.
+Appliquez l'ensemble des transformations nécessaires à tous les fichiers `caract-20xx.csv` pour les transformer conformément à la description des différents champs.
 
 ## Question 2 - Caractéristiques de l'accident
 
