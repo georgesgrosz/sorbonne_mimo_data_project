@@ -1,14 +1,34 @@
+# Introduction
+Le sujet du projet est la base de données annuelles des accidents corporels de la circulation routière - Années de 2005 à 2018.
+Cette base de données comporte les informations sur chaque accident corporel qui a eu lieu en France sur la période. La saisie des informations décrivant l’accident est effectuée par l’unité des forces de l’ordre (police, gendarmerie, etc.) qui est intervenue sur le lieu de l’accident. Ces saisies sont rassemblées dans une fiche intitulée Bulletin d’Analyse des Accidents Corporels. L’ensemble de ces fiches constitue le fichier national des accidents corporels de la circulation dit « Fichier BAAC » administré par l’Observatoire national interministériel de la sécurité routière "ONISR".
+
+Ces données répertorient l'intégralité des accidents corporels de la circulation, intervenus durant une année précise en France métropolitaine, dans les départements d’Outre-mer (Guadeloupe, Guyane, Martinique, La Réunion et Mayotte depuis 2012) avec une description simplifiée. Cela comprend des informations de localisation de l’accident, telles que renseignées ainsi que des informations concernant les caractéristiques de l’accident et son lieu, les véhicules impliqués et leurs victimes.
+
+# Constitution des groupes
+Les groueps sont forméss de deux personnes. Pour chaque groupe, les années étudié sont les suivante
+Groupe 1 : années 2005 à 2010
+Groupe 2 : années 2009 à 2014
+Groupe 3 : années 2013 à 2018
+
 # Pré-requis
 
 Avant de répondre aux questions du projet Data, il est conseillé de lire le fichier `description-des-bases-de-donnees-annuelles.pdf` qui décrit les différentes tables et leur contenu.
-Il faut égelement se rendre sur [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/base-de-donnees-accidents-corporels-de-la-circulation/
-)<img width="1433" height="70" alt="image" src="https://github.com/user-attachments/assets/6d4ac5d8-cd04-41f9-b553-6fc9849d882c" /> et télécharger les fichiers correspondants aux années assignées à votre groupe projet dans un répertoire "Données" à créer.
+Il faut se rendre sur https://www.data.gouv.fr/fr/datasets/base-de-donnees-accidents-corporels-de-la-circulation/
+ et télécharger les fichiers correspondants aux années assignées à votre groupe projet dans un répertoire "Données" à créer.
+Plus précisement pour chacune des années de la période étudiée, il faut télécharger les fichiers
+- caracteristiques
+- lieux
+- vehicules
+- usagers
+
+Important : Dans votre dossier devra figurer l'outil utilisé avec sa version et les années étudiées.
+Les points "Bonus" sont facultatifs.
 
 Pour toutes les questions ci-dessous, les réponses attendues doivent avoir le format suivant : 
 1 - Prompt utilisé, 
-2 - Code Python produit, 
-3 - Résultat de l'exécution du code Pyhtin 
-4 - Commentaires sur les corrections/ajustements réalisés.
+2 - Code Python produit (quand applicable), 
+3 - Résultat de l'exécution du code Python (quand applicable) 
+4 - Solution proposée ou commentaires sur les corrections/ajustements/itérations réalisés.
 
 ## Question 1 - Caractéristiques de l'accident
 
@@ -34,39 +54,47 @@ Lumière : conditions d’éclairage dans lesquelles l'accident s'est produit :
 
 Ainsi, la valeur 1 pour le champ lum doit être transformée en "Plein jour", la valeur 2 en "Crépuscule ou aube", etc. 
 
-Appliquez l'ensemble des transformations nécessaires à chacun des fichiers `caracteristique_20xx.csv` pour les transformer conformément à la description des différents champs et générer un fichier nommé `caracteristique_20xx_complet.csv` par année.
+Appliquez l'ensemble des transformations nécessaires à chacun des fichiers `caracteristique_20xx.csv` pour les transformer conformément à la description des différents champs et générer un fichier nommé `caracteristiques_20xx_complet.csv` par année.
 
-Bonus : Afin d'identifier les erreurs de codage dans les fichiers sources, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'a pas pu être transformée ou n'est pas renseignéee).
+## Question 1.3
+Afin d'identifier les erreurs de codage dans les fichiers sources, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'a pas pu être transformée ou n'est pas renseignéee).
 
 ## Question 2 - Caractéristiques de l'accident
 
 Analysez les données transformées `caracteristique_20xx.csv` des deux fichiers les plus récents traités et répondez aux questions suivantes:
 
-1. Combien d'accidents cumulés ont eu lieu en sur ces deux annnées ?
-2. Combien d'accidents ont eu lieu sur ces deux années en agglomération ?
-3. Affichez le nombre d'accidents par critère de luminosité sur la période.
+2.1. Combien d'accidents cumulés ont eu lieu en sur ces deux annnées ?
+2.2. Combien d'accidents ont eu lieu sur ces deux années en agglomération ?
+2.3. Affichez le nombre d'accidents par critère de luminosité sur la période.
 
 ## Question 3 - Lieux de l'accident
 
-Lire la donnée `lieux-2024.csv` et afficher les 5 premières lignes. Quelle est la taille de la donnée ? Combien de colonnes ? Combien de lignes ?
+On s'intéresse maintenant aux fichier lieux_20xx.csv.
+3.1 - En vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer tous les fichiers `lieux-20xx.csv` pour la période étudiée conformément à la description des différents champs de manière analogue à ce qui estfait dans la question 1.2.
 
-En vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer la donnée `lieux-2024.csv` conformément à la description des différents champs.
+Basé sur les fichiers transformés `lieux_20xx.csv`, répondez aux questions suivantes:
+3.2. Combien d'accidents ont eu lieu sur autoroute par année et quel pourcentage cela représente par rapport à tous les accidents ?
+3.3. En faisant le cumul sur toutes les années étudiées, affichez le nombre d'accidents par type de route.
+3.4. Quel est l'état de surface le plus accidentogène par année avec le % associé ?
+
+3.5 - Afin d'identifier les erreurs de codage dans les fichiers sources, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'est pas présente dans les listes de valeurs prooposées dans la document `description-des-bases-de-donnees-annuelles.pdf`).
+
+## Question 4 - Véhicules de l'accident
+
+De manière analogue au point 1.2 et en vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer les champs avec des valeurs énumérées (catv, obs, obsm, choc, manv, etc.) des fichiers `vehicules_20xx.csv` conformément à la description des différents champs.
 
 Questions de preprocessing:
-1. Comment gérer les valeurs manquantes dans les champs numériques (par exemple `pr`, `pr1`, `v1`) ?
-2. Quelles transformations sont nécessaires pour les champs catégoriels (catr, circ, vosp, prof, etc.) ?
-3. Comment nettoyer et valider les données avant transformation ?
+1. Comment gérer les valeurs invalides dans le champ `occutc` (Nombre d’occupants) ?
 
-Analysez les données transformées `lieux-2024.csv` et répondez aux questions suivantes:
-1. Combien d'accidents ont eu lieu sur autoroute ?
-2. Affichez la répartition des accidents par type de route.
-3. Quelle est la vitesse maximale autorisée moyenne sur les lieux d'accidents ?
+Analysez les données transformées `vehicules-2024.csv` et répondez aux questions suivantes:
+1. Quelle est la répartition des accidents par catégorie de véhicule ?
+2. Combien d'accidents impliquent des deux-roues motorisés ?
+3. Affichez la répartition par type de motorisation.
+
 
 ## Question 4 - Usagers de l'accident
 
-Lire la donnée `usagers-2024.csv` et afficher les 5 premières lignes. Quelle est la taille de la donnée ? Combien de colonnes ? Combien de lignes ?
-
-En vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer la donnée `usagers-2024.csv` conformément à la description des différents champs.
+De manière analogue au point 1.2 et en vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer les fichiers `usagers_20xx.csv` conformément à la description des différents champs.
 
 Questions de preprocessing:
 1. Comment calculer l'âge à partir de l'année de naissance (`an_nais`) ?
@@ -77,22 +105,6 @@ Analysez les données transformées `usagers-2024.csv` et répondez aux question
 1. Quelle est la répartition des accidents par gravité ?
 2. Combien d'usagers étaient des piétons ?
 3. Affichez la répartition par catégorie d'usager (conducteur, passager, piéton).
-
-## Question 5 - Véhicules de l'accident
-
-Lire la donnée `vehicules-2024.csv` et afficher les 5 premières lignes. Quelle est la taille de la donnée ? Combien de colonnes ? Combien de lignes ?
-
-En vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer la donnée `vehicules-2024.csv` conformément à la description des différents champs.
-
-Questions de preprocessing:
-1. Comment gérer les valeurs invalides dans le champ `senc` (sens de circulation) ?
-2. Quelles transformations sont nécessaires pour les champs catégoriels (catv, obs, obsm, choc, manv, etc.) ?
-3. Comment nettoyer le champ `occutc` (nombre d'occupants) ?
-
-Analysez les données transformées `vehicules-2024.csv` et répondez aux questions suivantes:
-1. Quelle est la répartition des accidents par catégorie de véhicule ?
-2. Combien d'accidents impliquent des deux-roues motorisés ?
-3. Affichez la répartition par type de motorisation.
 
 ## Question 6 - Jointure des données
 
