@@ -1,16 +1,16 @@
-# Introduction
-Le sujet du projet est la base de données annuelles des accidents corporels de la circulation routière - Années de 2005 à 2018.
+## Introduction
+Le sujet du projet est l'étude de la base de données annuelle des accidents corporels de la circulation routière. On se cncentre sur les années 2005 à 2018.
 Cette base de données comporte les informations sur chaque accident corporel qui a eu lieu en France sur la période. La saisie des informations décrivant l’accident est effectuée par l’unité des forces de l’ordre (police, gendarmerie, etc.) qui est intervenue sur le lieu de l’accident. Ces saisies sont rassemblées dans une fiche intitulée Bulletin d’Analyse des Accidents Corporels. L’ensemble de ces fiches constitue le fichier national des accidents corporels de la circulation dit « Fichier BAAC » administré par l’Observatoire national interministériel de la sécurité routière "ONISR".
 
 Ces données répertorient l'intégralité des accidents corporels de la circulation, intervenus durant une année précise en France métropolitaine, dans les départements d’Outre-mer (Guadeloupe, Guyane, Martinique, La Réunion et Mayotte depuis 2012) avec une description simplifiée. Cela comprend des informations de localisation de l’accident, telles que renseignées ainsi que des informations concernant les caractéristiques de l’accident et son lieu, les véhicules impliqués et leurs victimes.
 
-# Constitution des groupes
-Les groueps sont forméss de deux personnes. Pour chaque groupe, les années étudié sont les suivante
-Groupe 1 : années 2005 à 2010
-Groupe 2 : années 2009 à 2014
-Groupe 3 : années 2013 à 2018
+## Constitution des groupes
+Les groupes sont formés de deux personnes. Pour chaque groupe, les années étudiées sont les suivantes :
+Groupe 1 : années 2005 à 2010 incluses
+Groupe 2 : années 2009 à 2014 incluses
+Groupe 3 : années 2013 à 2018 incluses
 
-# Pré-requis
+## Pré-requis
 
 Avant de répondre aux questions du projet Data, il est conseillé de lire le fichier `description-des-bases-de-donnees-annuelles.pdf` qui décrit les différentes tables et leur contenu.
 Il faut se rendre sur https://www.data.gouv.fr/fr/datasets/base-de-donnees-accidents-corporels-de-la-circulation/
@@ -30,7 +30,9 @@ Pour toutes les questions ci-dessous, les réponses attendues doivent avoir le f
 3 - Résultat de l'exécution du code Python (quand applicable) 
 4 - Solution proposée ou commentaires sur les corrections/ajustements/itérations réalisés.
 
-## Question 1 - Caractéristiques de l'accident
+##
+## Questions 1 - Caractéristiques de l'accident
+##
 
 ## Question 1.1
 Lire tous les fichiers `caracteristiques_20xx.csv` qui se trouvent dans le répertoire "Données" et pour chacun d'eux, afficher les 5 premières lignes,  la taille du fichier, le nombre de colonnes et le nombre de lignes.
@@ -59,37 +61,63 @@ Appliquez l'ensemble des transformations nécessaires à chacun des fichiers `ca
 ## Question 1.3
 Afin d'identifier les erreurs de codage dans les fichiers sources, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'a pas pu être transformée ou n'est pas renseignéee).
 
-## Question 2 - Caractéristiques de l'accident
+## Question 1.4
+Afin d'analyser la pertinence des valeurs utilisées dans les attributs définis sur des domaines énumérés (par exemple lum), étudiez la répartition en % des valeurs pour tous les attributs énumérés et commenter. Méfiez-vous des différences  de codage sur les accents, les tirets et les espaces. 
 
 Analysez les données transformées `caracteristique_20xx.csv` des deux fichiers les plus récents traités et répondez aux questions suivantes:
+## Question 1.5
+Combien d'accidents cumulés ont eu lieu en sur ces deux annnées ?
 
-2.1. Combien d'accidents cumulés ont eu lieu en sur ces deux annnées ?
-2.2. Combien d'accidents ont eu lieu sur ces deux années en agglomération ?
-2.3. Affichez le nombre d'accidents par critère de luminosité sur la période.
+## Question 1.6
+Combien d'accidents ont eu lieu sur ces deux années en agglomération ?
 
-## Question 3 - Lieux de l'accident
+## Question 1.7
+Affichez le nombre d'accidents par critère de luminosité sur la période.
+
+##
+## Questions 2 - Lieux de l'accident
+##
 
 On s'intéresse maintenant aux fichier lieux_20xx.csv.
-3.1 - En vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer tous les fichiers `lieux-20xx.csv` pour la période étudiée conformément à la description des différents champs de manière analogue à ce qui estfait dans la question 1.2.
+## Question 2.1
+En vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer tous les fichiers `lieux-20xx.csv` pour la période étudiée conformément à la description des différents champs de manière analogue à ce qui estfait dans la question 1.2.
 
 Basé sur les fichiers transformés `lieux_20xx.csv`, répondez aux questions suivantes:
-3.2. Combien d'accidents ont eu lieu sur autoroute par année et quel pourcentage cela représente par rapport à tous les accidents ?
-3.3. En faisant le cumul sur toutes les années étudiées, affichez le nombre d'accidents par type de route.
-3.4. Quel est l'état de surface le plus accidentogène par année avec le % associé ?
 
-3.5 - Afin d'identifier les erreurs de codage dans les fichiers sources, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'est pas présente dans les listes de valeurs prooposées dans la document `description-des-bases-de-donnees-annuelles.pdf`).
+## Question 2.2
+Afin d'identifier les erreurs de codage dans les fichiers sources, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'est pas présente dans les listes de valeurs prooposées dans la document `description-des-bases-de-donnees-annuelles.pdf`).
 
-## Question 4 - Véhicules de l'accident
+## Question 2.3
+De manière analigue au point 1.4 et afin d'analyser la pertinence des valeurs utilisées dans les attributs définis sur des domaines énumérés (par exemple catr), étudiez la répartition en % des valeurs pour tous les attributs énumérés et commenter. Méfiez-vous des différences  de codage sur les accents, les tirets et les espaces. 
 
+## Question 2.4
+Combien d'accidents ont eu lieu sur autoroute par année et quel pourcentage cela représente par rapport à tous les accidents ?
+
+## Question 2.5
+En faisant le cumul sur toutes les années étudiées, affichez le nombre d'accidents par type de route.
+
+## Question 2.6
+Quel est l'état de surface le plus accidentogène par année avec le % associé ?
+
+##
+## Questions 3 - Véhicules de l'accident
+##
+
+## Question 3.1
 De manière analogue au point 1.2 et en vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer les champs avec des valeurs énumérées (catv, obs, obsm, choc, manv, etc.) des fichiers `vehicules_20xx.csv` conformément à la description des différents champs.
 
-Questions de preprocessing:
-1. Comment gérer les valeurs invalides dans le champ `occutc` (Nombre d’occupants) ?
+## Question 3.2
+Comment gérer les valeurs invalides dans le champ `occutc` (Nombre d’occupants) ?
 
 Analysez les données transformées `vehicules-2024.csv` et répondez aux questions suivantes:
-1. Quelle est la répartition des accidents par catégorie de véhicule ?
-2. Combien d'accidents impliquent des deux-roues motorisés ?
-3. Affichez la répartition par type de motorisation.
+
+## Question 3.3
+Quelle est la répartition des accidents par catégorie de véhicule ?
+
+## Question 3.4
+Combien d'accidents impliquent des deux-roues motorisés ?
+## Question 3.5
+Affichez la répartition par type de motorisation.
 
 
 ## Question 4 - Usagers de l'accident
