@@ -62,7 +62,7 @@ Appliquez l'ensemble des transformations nécessaires à chacun des fichiers `ca
 Afin d'identifier les erreurs de codage dans les fichiers sources, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'a pas pu être transformée ou n'est pas renseignéee).
 
 ## Question 1.4
-Afin d'analyser la pertinence des valeurs utilisées dans les attributs définis sur des domaines énumérés (par exemple lum), étudiez la répartition en % des valeurs pour tous les attributs énumérés et commenter. Méfiez-vous des différences  de codage sur les accents, les tirets et les espaces. 
+Afin d'analyser la pertinence des valeurs utilisées dans les attributs définis sur des domaines énumérés (par exemple lum), étudiez la répartition en % des valeurs pour tous les attributs énumérés et commenter. Commentez les résultats et approfondissez quand les % de valeurs hors domaine sont importants.
 
 Analysez les données transformées `caracteristique_20xx.csv` des deux fichiers les plus récents traités et répondez aux questions suivantes:
 ## Question 1.5
@@ -88,7 +88,7 @@ Basé sur les fichiers transformés `lieux_20xx.csv`, répondez aux questions su
 Afin d'identifier les erreurs de codage dans les fichiers sources, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'est pas présente dans les listes de valeurs prooposées dans la document `description-des-bases-de-donnees-annuelles.pdf`).
 
 ## Question 2.3
-De manière analigue au point 1.4 et afin d'analyser la pertinence des valeurs utilisées dans les attributs définis sur des domaines énumérés (par exemple catr), étudiez la répartition en % des valeurs pour tous les attributs énumérés et commenter. Méfiez-vous des différences  de codage sur les accents, les tirets et les espaces. 
+De manière analigue au point 1.4 et afin d'analyser la pertinence des valeurs utilisées dans les attributs définis sur des domaines énumérés (par exemple catr), étudiez la répartition en % des valeurs pour tous les attributs énumérés et commenter. Commentez les résultats et approfondissez quand les % de valeurs hors domaine sont importants. 
 
 ## Question 2.4
 Combien d'accidents ont eu lieu sur autoroute par année et quel pourcentage cela représente par rapport à tous les accidents ?
