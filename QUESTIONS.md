@@ -22,25 +22,25 @@ Plus précisement pour chacune des années de la période étudiée, il faut té
 - usagers
 
 Important : Dans votre dossier devra figurer l'outil utilisé avec sa version et les années étudiées.
-Les points "Bonus" sont facultatifs.
 
 Pour toutes les questions ci-dessous, les réponses attendues doivent avoir le format suivant : 
 1 - Prompt utilisé, 
 2 - Code Python produit (quand applicable), 
 3 - Résultat de l'exécution du code Python (quand applicable) 
-4 - Solution proposée ou commentaires sur les corrections/ajustements/itérations réalisés.
+4 - Solution/analyse proposée ou commentaires sur les corrections/ajustements/itérations réalisés.
 
 ##
-## Questions 1 - Caractéristiques de l'accident
+## Analyse des Caractéristiques de l'accident
 ##
 
 ## Question 1.1
 Lire tous les fichiers `caracteristiques_20xx.csv` qui se trouvent dans le répertoire "Données" et pour chacun d'eux, afficher les 5 premières lignes,  la taille du fichier, le nombre de colonnes et le nombre de lignes.
 
-Bonus : Créer un tableau de synthèse avec pour chaque fichier, la taille du fichier, le nombre de colonnes et le nombre de lignes et une dernière ligne qui cumule chaque colonne.
-
 ## Question 1.2
-En se basant sur le fichier attaché `description-des-bases-de-donnees-annuelles.pdf`, écrire un programme Phyton qui transforme les données des fichiers `caracteristiques_20xx.csv` conformément à la description des différents champs.
+Créer un tableau de synthèse avec pour chaque fichier `caracteristiques_20xx.csv`, la taille du fichier, le nombre de colonnes et le nombre de lignes et une dernière ligne qui cumule chaque colonne.
+
+## Question 1.3
+En se basant sur le fichier attaché `description-des-bases-de-donnees-annuelles.pdf`, transformez les données des fichiers `caracteristiques_20xx.csv` conformément à la description des différents champs.
 
 Par exemple, le champ lum est décrit de la manière suivante:
 
@@ -58,37 +58,37 @@ Ainsi, la valeur 1 pour le champ lum doit être transformée en "Plein jour", la
 
 Appliquez l'ensemble des transformations nécessaires à chacun des fichiers `caracteristique_20xx.csv` pour les transformer conformément à la description des différents champs et générer un fichier nommé `caracteristiques_20xx_complet.csv` par année.
 
-## Question 1.3
-Afin d'identifier les erreurs de codage dans les fichiers sources, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'a pas pu être transformée ou n'est pas renseignéee).
-
 ## Question 1.4
-Afin d'analyser la pertinence des valeurs utilisées dans les attributs définis sur des domaines énumérés (par exemple lum), étudiez la répartition en % des valeurs pour tous les attributs énumérés et commenter. Commentez les résultats et approfondissez quand les % de valeurs hors domaine sont importants.
+Afin d'identifier les erreurs de codage dans les fichiers sources sur les caractéristiques, créez un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'a pas pu être transformée ou n'est pas renseignéee). Analysez ce journal. Que déduire sur la qualité des données 'caracteristiques' ?
 
-Analysez les données transformées `caracteristique_20xx.csv` des deux fichiers les plus récents traités et répondez aux questions suivantes:
 ## Question 1.5
-Combien d'accidents cumulés ont eu lieu en sur ces deux annnées ?
+Afin d'analyser la pertinence des valeurs utilisées dans les attributs définis sur des domaines énumérés (par exemple lum) des données 'caracteristiques', étudiez la répartition en % des valeurs pour tous les attributs énumérés et commenter. Commentez les résultats et approfondissez quand le % de valeurs hors domaine est important.
 
+Analysez les données transformées `caracteristique_20xx_complet.csv` et répondez aux questions suivantes:
 ## Question 1.6
-Combien d'accidents ont eu lieu sur ces deux années en agglomération ?
+Combien d'accidents cumulés ont eu lieu en sur la période ?
 
 ## Question 1.7
+Combien d'accidents ont eu lieu sur la période en agglomération ?
+
+## Question 1.8
 Affichez le nombre d'accidents par critère de luminosité sur la période.
 
 ##
-## Questions 2 - Lieux de l'accident
+## Analyse des Lieux de l'accident
 ##
 
 On s'intéresse maintenant aux fichier lieux_20xx.csv.
 ## Question 2.1
-En vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer tous les fichiers `lieux-20xx.csv` pour la période étudiée conformément à la description des différents champs de manière analogue à ce qui estfait dans la question 1.2.
+En vous basant sur le fichier `description-des-bases-de-donnees-annuelles.pdf`, transformer tous les fichiers `lieux-20xx.csv` pour la période étudiée conformément à la description des différents champs de manière analogue à ce qui est fait dans la question 1.2.
 
 Basé sur les fichiers transformés `lieux_20xx.csv`, répondez aux questions suivantes:
 
 ## Question 2.2
-Afin d'identifier les erreurs de codage dans les fichiers sources, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'est pas présente dans les listes de valeurs prooposées dans la document `description-des-bases-de-donnees-annuelles.pdf`).
+De manière analigue au point 1.3 et afin d'analyser la pertinence des valeurs utilisées dans les attributs définis sur des domaines énumérés (par exemple catr), étudiez la répartition en % des valeurs pour tous les attributs énumérés et commenter. Commentez les résultats et approfondissez quand les % de valeurs hors domaine sont importants. 
 
 ## Question 2.3
-De manière analigue au point 1.4 et afin d'analyser la pertinence des valeurs utilisées dans les attributs définis sur des domaines énumérés (par exemple catr), étudiez la répartition en % des valeurs pour tous les attributs énumérés et commenter. Commentez les résultats et approfondissez quand les % de valeurs hors domaine sont importants. 
+Afin d'identifier les erreurs de codage dans les fichiers sources sur les lieux, ajouter un journal des lignes ignorées par fichier (lignes pour lesquelles au moins une valeur n'a pas pu être transformée ou n'est pas renseignéee). Analysez ce journal. Que déduire sur la qualité des données ?
 
 ## Question 2.4
 Combien d'accidents ont eu lieu sur autoroute par année et quel pourcentage cela représente par rapport à tous les accidents ?
